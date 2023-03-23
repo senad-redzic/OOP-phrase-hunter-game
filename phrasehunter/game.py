@@ -30,8 +30,9 @@ class Game():
 
   def start(self):
     self.welcome()
+    self.active_phrase.display(self.guesses)
     while self.missed < 5 and not self.active_phrase.check_complete(self.guesses):
-      print(f"\nNumber missed: {self.missed}")
+      print(f"\n\nNumber missed: {self.missed}")
       
       #Users input
       self.user_guess = self.get_guess()
